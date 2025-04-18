@@ -1,0 +1,33 @@
+well,reaction_mix,sample,target,copies,positives
+A01,supermix no dutp,5,1,502.375030517578,5726
+A01,supermix no dutp,5,2,5995.52001953125,17242
+A01,supermix no dutp,5,3,4979.2646484375,17058
+A01,supermix no dutp,5,6,4226.51123046875,16786
+B01,supermix no dutp,3,1,1000000,15195
+B01,supermix no dutp,3,2,46.030632019043,546
+B01,supermix no dutp,3,3,42.8575668334961,509
+B01,supermix no dutp,3,6,39.9488220214844,475
+C01,supermix no dutp,3,1,1000000,16968
+C01,supermix no dutp,3,2,46.8991470336914,621
+C01,supermix no dutp,3,3,46.1299095153809,611
+C01,supermix no dutp,3,6,35.485897064209,472
+D01,supermix no dutp,0,1,0,0
+D01,supermix no dutp,0,2,0,0
+D01,supermix no dutp,0,3,0.364254415035248,4
+D01,supermix no dutp,0,6,0,0
+E01,multiplex supermix,5,1,518.256958007813,2302
+E01,multiplex supermix,5,2,4536.87890625,6632
+E01,multiplex supermix,5,3,4800.6787109375,6667
+E01,multiplex supermix,5,6,4193.85302734375,6574
+F01,multiplex supermix,3,1,1000000,7703
+F01,multiplex supermix,3,2,42.0073318481445,253
+F01,multiplex supermix,3,3,37.6251258850098,227
+F01,multiplex supermix,3,6,33.7612380981445,204
+G01,multiplex supermix,3,1,1000000,7921
+G01,multiplex supermix,3,2,41.1603660583496,255
+G01,multiplex supermix,3,3,47.9058303833008,296
+G01,multiplex supermix,3,6,42.4737205505371,263
+H01,multiplex supermix,0,1,0.160882726311684,1
+H01,multiplex supermix,0,2,0.160882726311684,1
+H01,multiplex supermix,0,3,0.482709944248199,3
+H01,multiplex supermix,0,6,0.160882726311684,1
