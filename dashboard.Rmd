@@ -2,11 +2,10 @@
 title: "ddPCR Fluorescence Widgets"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
     theme: cosmo
 author: Anna Impellitteri
 ---
-
+The GitHub repository for this project can be found [here](https://github.com/annaimpel/dashboard).
 ```{r setup, echo=FALSE, message=FALSE}
 library(shiny)
 library(ggplot2)
@@ -89,4 +88,4 @@ Impact:
 The results of this test have informed our selection of reaction mix in subsequent tests and assay development. In the greater scheme of public health, multiplex assays that effectively test for pathogens in environmental samples add novelty to the field. 
 
 ## Data Overview ##
-The aim of this project is to develop and validate a digital droplet PCR multiplex assay that sensitively and specifically tests for outbreak pathogens in wastewater liquids and solids. To start, we had to test two different reaction mixes, which are measured by a droplet reader. Via Poisson statistics the software estimates the DNA/RNA gene copies / µl of sample. We collected data via laboratory testing in October of 2024, which can be found here. 
+The aim of this project is to develop and validate a digital droplet PCR multiplex assay that sensitively and specifically tests for outbreak pathogens in wastewater liquids and solids. To start, we had to test two different reaction mixes, which are measured by a droplet reader. Via Poisson statistics the software estimates the DNA/RNA gene copies / µl of sample. We collected data via laboratory testing in October of 2024, which can be found [here](https://github.com/annaimpel/dashboard/blob/main/ddpcr.csv).
