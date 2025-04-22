@@ -1,11 +1,12 @@
 ---
-title: "ddPCR Fluorescence Widgets"
+title: "ddPCR Fluorescence"
 output: 
   flexdashboard::flex_dashboard:
     theme: cosmo
+    orientation: columns
+    vertical_layout: fill
 author: Anna Impellitteri
 ---
-The GitHub repository for this project can be found [here](https://github.com/annaimpel/dashboard).
 ```{r setup, echo=FALSE, message=FALSE}
 library(shiny)
 library(ggplot2)
@@ -34,8 +35,7 @@ pcr <- pcr %>%
                                "multiplex supermix" = "One-Step RT Supermix"))
 ```
 
-## Fluorescence Visualization ##
-### Violin Plot ###
+## Violin Plot of Flourescence
 ```{r}
 p <- ggplot(pcr, aes(x = pathogen, y = log_positives, fill = pathogen)) +
   geom_violin(alpha = 0.6) + 
@@ -62,11 +62,10 @@ plotly_violin
 
 
 ```
-Figure 1: The fluorescence intensity (indicated by number of positive partitions) for the Supermix no dUTP reaction mix is consistently high, with most values clustering above 3 on the log scale, indicating consistently higher positive partition counts and less variability in fluorescence. In contrast, the RT Supermix reaction mix exhibits a broader range of positive partition values, indicating a lower and more variable fluorescence.
+### Figure 1: The fluorescence intensity (indicated by number of positive partitions) for the Supermix no dUTP reaction mix is consistently high, with most values clustering above 3 on the log scale, indicating consistently higher positive partition counts and less variability in fluorescence. In contrast, the RT Supermix reaction mix exhibits a broader range of positive partition values, indicating a lower and more variable fluorescence.
 
-## Summary Table ##
-### Mean Gene Copies per µl ###
-```{r}
+## Summary Table, Mean Gene Copies per µl
+```{r} 
 summary_table <- pcr %>%
   filter(sample %in% c(3, 5)) %>%  
   group_by(sample, pathogen, reaction_mix) %>%
@@ -82,10 +81,12 @@ datatable(summary_table,
           rownames = FALSE) 
 
 ```
-Figure 2: For all pathogens except measles, mean gene copies/µl were higher in concentrations of 10^5^ than 10^3^ regardless of reaction mix. For most pathogens, mean gene copies/µl were greater in the Supermix no dUTP than the One-Step RT Supermix when concentration was held constant.
+### Figure 2: For all pathogens except measles, mean gene copies/µl were higher in concentrations of 10^5^ than 10^3^ regardless of reaction mix. For most pathogens, mean gene copies/µl were greater in the Supermix no dUTP than the One-Step RT Supermix when concentration was held constant.
 
-Impact:
-The results of this test have informed our selection of reaction mix in subsequent tests and assay development. In the greater scheme of public health, multiplex assays that effectively test for pathogens in environmental samples add novelty to the field. 
+### Impact 
+The results of this test have informed our selection of reaction mix in subsequent tests and assay development. In the greater scheme of public health, multiplex assays that effectively test for pathogens in environmental samples add novelty to the field.
 
-## Data Overview ##
+### Data Overview
 The aim of this project is to develop and validate a digital droplet PCR multiplex assay that sensitively and specifically tests for outbreak pathogens in wastewater liquids and solids. To start, we had to test two different reaction mixes, which are measured by a droplet reader. Via Poisson statistics the software estimates the DNA/RNA gene copies / µl of sample. We collected data via laboratory testing in October of 2024, which can be found [here](https://github.com/annaimpel/dashboard/blob/main/ddpcr.csv).
+
+The GitHub repository for this project can be found [here](https://github.com/annaimpel/dashboard).
