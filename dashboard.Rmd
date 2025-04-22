@@ -35,6 +35,7 @@ pcr <- pcr %>%
                                "multiplex supermix" = "One-Step RT Supermix"))
 ```
 
+# Plots
 ## Violin Plot of Flourescence
 ```{r}
 p <- ggplot(pcr, aes(x = pathogen, y = log_positives, fill = pathogen)) +
@@ -83,10 +84,17 @@ datatable(summary_table,
 ```
 ### Figure 2: For all pathogens except measles, mean gene copies/µl were higher in concentrations of 10^5^ than 10^3^ regardless of reaction mix. For most pathogens, mean gene copies/µl were greater in the Supermix no dUTP than the One-Step RT Supermix when concentration was held constant.
 
-### Impact 
-The results of this test have informed our selection of reaction mix in subsequent tests and assay development. In the greater scheme of public health, multiplex assays that effectively test for pathogens in environmental samples add novelty to the field.
+
+# Data Overview
+## Data Overview
 
 ### Data Overview
 The aim of this project is to develop and validate a digital droplet PCR multiplex assay that sensitively and specifically tests for outbreak pathogens in wastewater liquids and solids. To start, we had to test two different reaction mixes, which are measured by a droplet reader. Via Poisson statistics the software estimates the DNA/RNA gene copies / µl of sample. We collected data via laboratory testing in October of 2024, which can be found [here](https://github.com/annaimpel/dashboard/blob/main/ddpcr.csv).
 
 The GitHub repository for this project can be found [here](https://github.com/annaimpel/dashboard).
+
+## Impact 
+
+### Impact
+The results of this test have informed our selection of reaction mix in subsequent tests and assay development. In the greater scheme of public health, multiplex assays that effectively test for pathogens in environmental samples add novelty to the field.
+
